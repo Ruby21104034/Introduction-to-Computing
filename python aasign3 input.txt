@@ -1,0 +1,124 @@
+
+#Question 1
+
+'''Program to count occurences of character in string'''
+
+
+print("The solution of Question 1 is: ")
+
+#Taking input string from user
+str1=input("Enter the string here: ")
+
+length_of_str1=len(str1)
+print(len(length_of_str1))
+
+#Writing code to count the characters and printing output
+for character in str1:
+    print(character,"=",str1.count(character))
+    
+print("-x"*60)
+
+
+
+#Question 3
+
+'''Program to creat list of tuples'''
+
+print("The solution of Ques 3 is :")
+
+#Creating empty list
+list=[]
+
+#Taking input from user
+number=int(input("Enter the length of list: "))
+print("Enter the numbers: ")
+
+#
+for i in range(number):
+    data=int(input())
+    list.append(data)
+
+#Printing list
+print(list)
+    
+#Creating required tuple
+res=[(val,pow(val,2)) for val in list]
+
+#Printing final output
+print("The required list of tuples is : ",res)
+
+print("-x"*60)
+
+
+
+#Question 4
+
+'''Program to print performance and grade'''
+
+print("The solution of Ques 4 is :")
+
+#Taking marks input from user
+grade_point=int(input("Enter your grade here: "))
+
+#Using if else statements
+
+if grade_point==10:
+    print("Your grade is A+ and Outstanding performance")
+elif grade_point>=9:
+    print("Your grade is A and Excellent performance")
+elif grade_point>=8:
+    print("Your grade is B+ and Very Good performance")
+elif grade_point>=7:
+    print("Your grade is B and Good performance")          
+elif grade_point>=6:
+    print("Your grade is C+ and Average performance")
+elif grade_point>=5:
+    print("Your grade is C and Below Average performance")
+elif grade_point>=4:
+    print("Your grade is D and Poor performance")
+else:
+    print("Invalid Input!")
+
+print("-x"*60)
+
+
+
+#Question 5
+
+'''Program to print a pattern'''
+
+print("The solution of Ques 5 is :")
+
+string=("ABCDEFGHIJK")
+length=len(string)
+
+
+for i in range(length):
+    for j in range(i):
+        print("",end=" ")
+    for j in range(length-i):
+        print(string[j],end=" ")
+    print()    
+
+print("-x"*60)        
+
+
+#Question 6
+
+'''Program to perform operations on dictionary'''
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
