@@ -1,0 +1,255 @@
+#Question 1
+
+'''Program to solve the problem of tower of Hanoi with three disks'''
+
+print("The solution of Ques 1 is: ")
+
+#Writing the recursive python function to solve tower of hanoi
+
+def Tower_of_Hanoi(n,from_rod,to_rod,aux_rod):
+    if n == 0:
+        return
+    Tower_of_Hanoi(n-1, from_rod, aux_rod, to_rod)
+    print("Move disk",n,"from rod",from_rod,"to rod",to_rod)
+    Tower_of_Hanoi(n-1, aux_rod, to_rod, from_rod)
+
+n = 4
+Tower_of_Hanoi(n, 'A', 'C' , 'B')
+
+print("-x"*50)
+
+
+
+#Question 2
+
+
+'''Program to print Pascal's triangle'''
+
+
+print("The solution of Ques 2 is: ")
+
+#Taking input from user
+n=int(input("Enter a number here: "))
+
+for i in range(1,n+1):
+    for j in range(0,n-i+1):
+        print(' ',end='')
+
+        #First element is always 1
+        C = 1
+        for j in range(1,i+1):
+
+            #first value in line is always 1
+            print(' ', C, sep='', end='')
+
+            #using binomial coefficient
+            C = C * (i - j) // j
+
+        print()
+
+print("-x"*50)
+
+
+#Question 3
+
+
+'''Program to find quotient and remainder and perform various operations afterwards'''
+
+print("The solution of Ques 3 is: ")
+
+#Program to find quotient and remainder
+
+num1 = int(input("Enter N1 here: "))
+num2 = int(input("Enter N2 here: "))
+
+
+#Finding remainder and qoutient using function
+def func(num1,num2):
+     Q = (num1)//(num2)
+     print("Quotient is : ",Q)
+
+     R = num1%num2
+     print("Remainder is : ",R)
+    
+#Calling function   
+func(num1,num2)    
+
+
+#Part a
+print("Checking whether the given function is callable:",callable(func))
+
+#Part b
+
+    
+print("-x"*50)
+
+
+#Question 4
+        
+'''Program to create class Student and using _init_() function to assign values for name and age'''
+
+print("The solution of Ques 4 is: ")
+
+#Creating class named student
+
+class Student:
+    #Using _init_ function to assign values for name and roll number
+    def __init__(self, Name, RollNumber): 
+        self.Name = Name             #instance attribute        
+        self.RollNumber = RollNumber #instance attribute
+S1 = Student("Nina" , 23345)
+
+print(S1.Name)
+print(S1.RollNumber)
+
+#Deleting the object created
+del S1
+
+print("-x"*50)
+
+
+
+#Question 5
+
+'''Program to store details of employee'''
+
+print("The solution of Ques 5 is : ")
+
+#Writing code to store details of 3 employees using class
+
+class Employee:
+    count=0
+    def __init__(self,name,salary):
+        self.name=name
+        self.salary=salary
+        Employee.count+=1
+    def DisplayDetails(self):
+        print("NAME:", self.name , "SALARY:", self.salary )
+        
+#Creating objects
+Emp1=Employee("Mehak",40000)
+Emp2=Employee("Ashok",50000)
+Emp3=Employee("Viren",60000)
+
+#Printing the output
+print("The details of all 3 employees  in company is: ")
+
+Emp1.DisplayDetails()
+Emp2.DisplayDetails()
+Emp3.DisplayDetails()
+
+#Updating salary of Mehak
+
+print("The updated salary of Mehak: ")
+Emp1.salary=70000
+Emp1.DisplayDetails()
+
+#Delete the record of Viren
+
+print("Deleting record of Viren")
+del Emp3
+
+Emp1.DisplayDetails()
+Emp2.DisplayDetails()
+'''HERE'''
+
+print("Tried to print Emp3 at the place where HERE is written in code but it showed ERROR which means Emp3 has been deleted from the record")
+
+
+print("-x"*50)
+
+
+
+#Question 6
+
+ 
+
+print("The solution of Ques 6 is: ")
+
+#Taking input from george and creating different permutations of it
+
+from itertools import permutations
+import string
+
+s=input("Enter the word here: ")
+a=string.ascii_letters
+p=permutations(s)
+
+#Create a dictionary
+d=[]
+for i in list (p):
+
+    #print only if not in dictionary
+    if(i not in d):
+        d.append(i)
+        print(''.join(i))
+
+print("-x"*50)
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+
+
+
+
+
